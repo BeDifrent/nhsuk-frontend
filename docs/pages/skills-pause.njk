@@ -1,0 +1,92 @@
+{% set title = 'Install - NHS.UK frontend' %}
+{% from 'components/breadcrumb/macro.njk' import breadcrumb %}
+{% from 'components/inset-text/macro.njk' import insetText %}
+{% from 'components/textarea/macro.njk' import textarea %}
+{% from 'components/button/macro.njk' import button %}
+{% from 'components/button/macro.njk' import button %}
+
+
+
+
+{% extends 'page.njk' %}
+
+{% block header %}
+  {{ super() }}
+{% endblock %}
+
+{% block breadcrumb %}
+  {{ breadcrumb({
+    href: "../",
+    text: "Back"
+  }) }}
+{% endblock %}
+
+{% block content %}
+
+
+  <div class="nhsuk-u-reading-width">
+    <span class="nhsuk-caption-xl">Apply for a job</span>
+
+  <h1>Skills for the job</h1>
+
+
+    <p class="nhsuk-body-l">This employer needs you to give evidence of 5 skills for this job.</p>
+
+    <p>Tell us how you have gained each of the essential skills or give evidence of situations where you have used them.</p>
+
+     {{ insetText({
+            "HTML": "<p>Describing how you meet desirable criteria is not necessary but will help support your application.</p>"
+          }) }}
+
+  <h2 class="nhsuk-heading-l">Skill 1 of 5</h2>
+
+  <h3 class="nhsuk-heading-m">Essential</h3>
+
+
+    <ul>
+      <li>Proven experience in a NHS Orthopaedic setting</li>
+      <li>Able to demonstrate excellent knowledge base gained through training and education or experience</li>
+    </ul>
+
+{{ textarea({
+            "name": "more-detail",
+            "id": "more-detail",
+            "label": {
+              "text": "Write your answer below"
+            },
+            "hint": {
+              "text": "1000 words remaining"
+            }
+          }) }}
+
+
+          <h3 class="nhsuk-heading-m">Desirable</h3>
+
+
+    <ul>
+      <li>Proven experience in a NHS Orthopaedic setting</li>
+      <li>Able to demonstrate excellent knowledge base gained through training and education or experience</li>
+    </ul>
+
+{{ textarea({
+            "name": "more-detail",
+            "id": "more-detail",
+            "label": {
+              "text": "Write your answer below"
+            },
+            "hint": {
+              "text": "1000 words remaining"
+            }
+          }) }}
+
+  <a href="../index.html" class="nhsuk-button">
+            Save and continue
+          </a>  
+
+          <p><a href=\"#" title=\"External website\">Save and come back later</a></p>
+    
+    
+
+  </div>
+
+{% endblock %}

@@ -1,0 +1,157 @@
+{% set title = 'Install - NHS.UK frontend' %}
+{% from 'components/breadcrumb/macro.njk' import breadcrumb %}
+{% from 'components/inset-text/macro.njk' import insetText %}
+{% from 'components/textarea/macro.njk' import textarea %}
+{% from 'components/button/macro.njk' import button %}
+{% from 'components/input/macro.njk' import input %}
+{% from 'components/date-input/macro.njk' import dateInput %}
+
+
+
+
+
+
+
+
+{% extends 'page.njk' %}
+
+{% block header %}
+ {{ header({
+      "transactionalService": {
+        "name": "Get a job with the NHS",
+        "longName": "true"
+      },
+      "showNav": "false",
+      "showSearch": "false"
+    })
+  }}
+{% endblock %}
+
+{% block breadcrumb %}
+  {{ breadcrumb({
+    href: "../",
+    text: "Back"
+  }) }}
+{% endblock %}
+
+{% block content %}
+
+
+  <div class="nhsuk-u-reading-width">
+
+  <span class="nhsuk-caption-xl">Apply for a job</span>
+           
+          <h1>Qualifications</h1>
+
+
+    <p class="nhsuk-body-l">Start with your most recent qualification or training course through to your earliest.</p>
+
+
+     
+
+  <h2 class="nhsuk-heading-l">Qualification 1</h2>
+
+{{ input({
+            "label": {
+              "text": "Subject"
+            },
+            "id": "input-example",
+            "name": "test-name"
+          }) }}
+
+{{ input({
+            "label": {
+              "text": "Place of study"
+            },
+            "id": "input-example",
+            "name": "test-name"
+          }) }}
+
+ {{ input({
+            "label": {
+              "text": "Result"
+            },
+            "id": "input-example",
+            "name": "test-name"
+          }) }}
+
+{{ dateInput({
+            "id": "dob",
+            "namePrefix": "dob",
+            "fieldset": {
+              "legend": {
+                "text": "Start date"
+              }
+            },
+            "hint": {
+              "text": "For example, 31 3 1980"
+            },
+            "items": [
+              
+              {
+                "name": "month",
+                "classes": "nhsuk-input--width-2"
+              },
+              {
+                "name": "year",
+                "classes": "nhsuk-input--width-4"
+              }
+            ]
+          }) }}
+
+  {{ dateInput({
+            "id": "dob",
+            "namePrefix": "dob",
+            "fieldset": {
+              "legend": {
+                "text": "Finish date"
+              }
+            },
+            "hint": {
+              "text": "For example, 31 3 1980"
+            },
+            "items": [
+              
+              {
+                "name": "month",
+                "classes": "nhsuk-input--width-2"
+              },
+              {
+                "name": "year",
+                "classes": "nhsuk-input--width-4"
+              }
+            ]
+          }) }}
+
+
+
+                 
+
+    
+
+
+
+
+         
+
+
+    
+
+{{ button({
+            "text": "Add another qualification",
+            "classes": "nhsuk-button--secondary"
+          }) }}
+          <br>
+          <br>
+
+  <a href="job-history.html" class="nhsuk-button">
+            Save and continue
+          </a> 
+
+          <p><a href=\"#" title=\"External website\">Save and come back later</a></p>
+    
+    
+
+  </div>
+
+{% endblock %}

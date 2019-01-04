@@ -1,0 +1,153 @@
+{% set title = 'Install - NHS.UK frontend' %}
+{% from 'components/breadcrumb/macro.njk' import breadcrumb %}
+{% from 'components/inset-text/macro.njk' import insetText %}
+{% from 'components/textarea/macro.njk' import textarea %}
+{% from 'components/button/macro.njk' import button %}
+{% from 'components/input/macro.njk' import input %}
+{% from 'components/date-input/macro.njk' import dateInput %}
+
+
+
+
+
+
+
+
+
+{% extends 'page.njk' %}
+
+{% block header %}
+  {{ super() }}
+{% endblock %}
+
+{% block breadcrumb %}
+  {{ breadcrumb({
+    href: "../",
+    text: "Back"
+  }) }}
+{% endblock %}
+
+{% block content %}
+
+
+  <div class="nhsuk-u-reading-width">
+
+  <span class="nhsuk-caption-xl">Apply for a job</span>
+           
+          <h1>Job history</h1>
+
+
+    <p class="nhsuk-body-l">Start with your most recent job first.</p>
+
+
+     
+
+  <h2 class="nhsuk-heading-l">Job 1</h2>
+
+{{ input({
+            "label": {
+              "text": "Job title"
+            },
+            "id": "input-example",
+            "name": "test-name"
+          }) }}
+
+{{ input({
+            "label": {
+              "text": "Employer"
+            },
+            "id": "input-example",
+            "name": "test-name"
+          }) }}
+
+{{ textarea({
+            "name": "more-detail",
+            "id": "more-detail",
+            "label": {
+              "text": "Key tasks"
+            },
+            "hint": {
+              "text": "Describe some of your key tasks"
+            }
+          }) }}
+
+{{ dateInput({
+            "id": "dob",
+            "namePrefix": "dob",
+            "fieldset": {
+              "legend": {
+                "text": "Start date"
+              }
+            },
+            "hint": {
+              "text": "For example, 3 1980"
+            },
+            "items": [
+              
+              {
+                "name": "month",
+                "classes": "nhsuk-input--width-2"
+              },
+              {
+                "name": "year",
+                "classes": "nhsuk-input--width-4"
+              }
+            ]
+          }) }}
+
+  {{ dateInput({
+            "id": "dob",
+            "namePrefix": "dob",
+            "fieldset": {
+              "legend": {
+                "text": "Finish date"
+              }
+            },
+            "hint": {
+              "text": "For example, 3 1980"
+            },
+            "items": [
+              
+              {
+                "name": "month",
+                "classes": "nhsuk-input--width-2"
+              },
+              {
+                "name": "year",
+                "classes": "nhsuk-input--width-4"
+              }
+            ]
+          }) }}
+
+
+
+                 
+
+    
+
+
+
+
+         
+
+
+    
+
+{{ button({
+            "text": "Add another job",
+            "classes": "nhsuk-button--secondary"
+          }) }}
+          <br>
+          <br>
+
+  <a href="skills-pause.html" class="nhsuk-button">
+            Save and continue
+          </a>   
+
+          <p><a href=\"#" title=\"External website\">Save and come back later</a></p>
+    
+    
+
+  </div>
+
+{% endblock %}
